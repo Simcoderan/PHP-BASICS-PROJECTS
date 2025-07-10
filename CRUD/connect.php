@@ -1,10 +1,8 @@
 <?php
+$con = new mysqli("localhost", "root", "", "crudoperation");
 
-
-$con=new mysqli("localhost", "root", "", "crudoperation");
-
-if(!$con){
-    die(mysqli_error($con));
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
-
- ?>
+?>

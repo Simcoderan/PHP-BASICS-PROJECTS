@@ -10,7 +10,8 @@ $sql= "insert into `crud`(name, email, mobile, password) values('$name', '$email
 $result= mysqli_query($con, $sql);
 
 if($result){
-     echo "Data inserted successfully";
+    // echo "Data inserted successfully";
+    header("Location: display.php");
 
 } else {
     die(mysqli_error($con));
